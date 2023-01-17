@@ -14,9 +14,7 @@ CASCADE_XML = 'haarcascade_frontalface_default.xml'
 vjones = cv2.CascadeClassifier(cv2.data.haarcascades + CASCADE_XML)
 
 """
-Awalnya saya ingin menggunakan haar cascading supaya proses lebih cepat,
-namun ternyata model kurang robust sehingga tidak jadi saya gunakan.
-Beberapa fungsi untuk mendukung haar cascading masih ada disini untuk debugging.
+Initially opting for simpler viola-jones, though it turned out to be not robust
 """
 
 ##################################
