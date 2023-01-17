@@ -1,0 +1,108 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Face Recognition API",
+      "version": "1.0.0"
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "servers": [{
+      "uri": "/"
+    }], 
+    "tags": [
+      {
+        "name": "Face Recognition",
+        "description": "Example API for registering and recognizing faces from an image file"
+      }
+    ],
+    "paths": {
+      "/static/{path}": {
+        "get": {
+          "tags":[
+            "Face Recognition"
+          ],
+          "summary": "Loads static file",
+          "operationId": "send_static",
+          "parameters": [
+            {
+              "name": "path",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            },
+            "default": {
+              "description": "Error"
+            }
+          }
+        }
+      },
+      "/register": {
+        "post": {
+          "tags":[
+            "Face Recognition"
+          ],
+          "summary": "POST Method to register the face",
+          "operationId": "face_upload_package",
+          "parameters": [
+            {
+              "name": "image_file",
+              "in": "formData",
+              "required": true,
+              "type": "file"
+            },
+            {
+              "name": "name",
+              "in": "formData",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            },
+            "400": {
+              "description": "Invalid input"
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        }
+      },
+      "/verification": {
+        "post": {
+          "tags":[
+            "Face Recognition"
+          ],
+          "summary": "POST method to do face recognition",
+          "operationId": "face_recognition",
+          "parameters": [
+            {
+              "name": "image_file",
+              "in": "formData",
+              "required": true,
+              "type": "file"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            },
+            "400": {
+              "description": "Invalid input"
+            }
+            },
+            "default": {
+              "description": "Error"
+            }
+          }
+        }
+      }
+    }
+  

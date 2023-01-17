@@ -1,0 +1,6 @@
+####################
+### git packages ###
+####################
+
+git+https://github.com/elliottzheng/face-detection.git@master
+git+https://github.com/rcmalli/keras-vggface.git
