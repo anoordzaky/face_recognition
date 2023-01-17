@@ -7,3 +7,6 @@
   <li>Install both requirements.txt and repo_requirements.txt</li>
   <li>Run the app</li>
 </ol>
+
+<h2>Docs</h2>
+<p>The documentations is available on the /docs address after running the app.</p>
